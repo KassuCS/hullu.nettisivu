@@ -7,45 +7,70 @@
             font-family: Arial, sans-serif;
             margin: 20px;
         }
+        .image-container {
+            display: flex;
+            justify-content: flex-start;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 200px;
+            height: auto;
+        }
         .pyramid {
             font-size: 14px;
             line-height: 1.2;
             text-align: left;
-            margin-top: 20px;
         }
     </style>
 </head>
 <body>
     <h1>Mr. 0 ball knowledge GINKELI</h1>
     <h3>Lionel Pepsi Max No taste maximum sugar</h3>
+    
+    <div class="image-container">
+        <img src="ginkeli1.jpg" alt="Ginkeli 1">
+        <img src="ginkeli2.jpg" alt="Ginkeli 2">
+    </div>
+    
     <iframe width="560" height="315" src="https://www.youtube.com/embed/-9HAB1vypcw?si=BZLq5XZfwXg646LM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
     
-    <div class="pyramid">
-        Blendi Ginkeli<br>
-        Blendi Ginkel<br>
-        Blendi Ginke<br>
-        Blendi Gink<br>
-        Blendi Gin<br>
-        Blendi Gi<br>
-        Blendi G<br>
-        Blendi<br>
-        Blend<br>
-        Blen<br>
-        Ble<br>
-        Bl<br>
-        B<br>
-        Bl<br>
-        Ble<br>
-        Blen<br>
-        Blend<br>
-        Blendi<br>
-        Blendi G<br>
-        Blendi Gi<br>
-        Blendi Gin<br>
-        Blendi Gink<br>
-        Blendi Ginke<br>
-        Blendi Ginkel<br>
-        Blendi Ginkeli
-    </div>
+    <div id="pyramid-container" class="pyramid"></div>
+
+    <script>
+        const pyramidLines = [
+            "Blendi Ginkeli",
+            "Blendi Ginkel",
+            "Blendi Ginke",
+            "Blendi Gink",
+            "Blendi Gin",
+            "Blendi Gi",
+            "Blendi G",
+            "Blendi",
+            "Blend",
+            "Blen",
+            "Ble",
+            "Bl",
+            "B",
+            "Bl",
+            "Ble",
+            "Blen",
+            "Blend",
+            "Blendi",
+            "Blendi G",
+            "Blendi Gi",
+            "Blendi Gin",
+            "Blendi Gink",
+            "Blendi Ginke",
+            "Blendi Ginkel",
+            "Blendi Ginkeli"
+        ];
+        const container = document.getElementById("pyramid-container");
+        for (let i = 0; i < 20; i++) {
+            pyramidLines.forEach(line => {
+                container.innerHTML += line + "<br>";
+            });
+        }
+    </script>
 </body>
 </html>
